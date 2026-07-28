@@ -1,0 +1,82 @@
+# General
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Node modules (any subproject)
+node_modules/
+
+# Build outputs
+dist/
+public/build/
+public/hot
+
+# Environment files
+.env
+.env.local
+.env.*
+
+# Keep example env files in the repo
+!.env.example
+!/laravel-backend/.env.example
+!/react-frontend/.env.example
+
+# Composer / PHP
+vendor/
+composer.phar
+.phpunit.result.cache
+
+# Laravel backend (project-specific)
+/laravel-backend/vendor/
+/laravel-backend/node_modules/
+/laravel-backend/public/hot
+/laravel-backend/public/storage
+/laravel-backend/.env
+/laravel-backend/.env.*
+/laravel-backend/.phpunit.result.cache
+/laravel-backend/phpunit.xml.cache
+
+# Ignore Laravel storage and cache but keep the directory placeholders
+/laravel-backend/storage/
+!/laravel-backend/storage/.gitignore
+/laravel-backend/bootstrap/cache/
+!/laravel-backend/bootstrap/cache/.gitignore
+
+# React frontend
+/react-frontend/node_modules/
+/react-frontend/dist/
+/react-frontend/.env
+/react-frontend/.env.*
+
+# p2p-node
+/p2p-node/node_modules/
+
+# Test coverage / caches
+coverage/
+coverage.xml
+.nyc_output/
+
+# Tool caches and build artifacts
+node_modules/.cache
+.cache/
+.parcel-cache/
+.vite/
+.sass-cache/
+
+# Optional: local build artifacts, editor temp files
+*.cache
+*.tmp
+
+
+# Ignore folder sturcture file
+structure.txt
