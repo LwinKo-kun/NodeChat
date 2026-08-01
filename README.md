@@ -25,7 +25,7 @@
 
 # Overview
 
-PeerMail is an educational distributed systems project designed to demonstrate how secure communication can occur without relying on centralized message storage.
+NodeChat is an educational distributed systems project designed to demonstrate how secure communication can occur without relying on centralized message storage.
 
 Instead of routing messages through a central server, each user runs a local Node.js daemon that communicates directly with other peers. A Laravel backend is used only for:
 
@@ -125,7 +125,7 @@ This architecture provides a simplified blueprint for larger decentralized syste
 # Project Structure
 
 ```
-PeerMail/
+NodeChat/
 │
 ├── backend-laravel/
 │   ├── app/
