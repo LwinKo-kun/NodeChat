@@ -1,4 +1,4 @@
-# PeerMail
+# NodeChat
 
 > A lightweight distributed peer-to-peer (P2P) messaging application that demonstrates decentralized communication using public-key cryptography. Messages are exchanged directly between peers without passing through a central messaging server.
 
