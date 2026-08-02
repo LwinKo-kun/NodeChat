@@ -1,16 +1,11 @@
-import { Outlet, Link } from 'react-router-dom'; // If using React Router, or use your state switcher
+import { Outlet } from 'react-router-dom';
+import Navbar from './Navbar';
 
-export default function Layout() {
+export default function Layout({ user, onLogout }) {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-      <nav className="p-4 bg-white shadow flex gap-6 border-b border-gray-200">
-        <Link to="/" className="font-semibold hover:text-blue-600">Home</Link>
-        <Link to="/about" className="font-semibold hover:text-blue-600">About</Link>
-        <Link to="/contact" className="font-semibold hover:text-blue-600">Contact</Link>
-      </nav>
-
-      <main className="max-w-4xl mx-auto mt-6 p-4">
-        {/* Outlet renders the current matching route */}
+    <div className="app-shell">
+      <Navbar user={user} onLogout={onLogout} />
+      <main className="app-content">
         <Outlet />
       </main>
     </div>

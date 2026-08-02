@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 const API_URL = 'http://127.0.0.1:8000/api';
 
-export default function Register({ switchToLogin }) {
+export default function Register() {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,7 +26,7 @@ export default function Register({ switchToLogin }) {
 
       setSuccess('Registration successful! Redirecting to login...');
       setTimeout(() => {
-        switchToLogin();
+        navigate('/login');
       }, 1500);
     } catch (err) {
       setError(err.message);
@@ -61,8 +63,8 @@ export default function Register({ switchToLogin }) {
           />
           <button type="submit">Sign Up</button>
         </form>
-        <p onClick={switchToLogin} className="toggle-link">
-          Already have an account? Login
+        <p className="toggle-link">
+          <Link to="/login">Already have an account? Login</Link>
         </p>
       </div>
     </div>

@@ -10,5 +10,3 @@ Route::post('/friends/add', [ChatController::class, 'addFriend']);
 Route::get('/friends/{userId}', [ChatController::class, 'getFriends']);
 Route::post('/messages/send', [ChatController::class, 'sendMessage']);
 Route::get('/messages/fetch', [ChatController::class, 'getMessages']);
-
-php?>

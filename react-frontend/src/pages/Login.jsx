@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 const API_URL = 'http://127.0.0.1:8000/api';
 
 export default function Login({ onLoginSuccess, switchToRegister }) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -21,6 +23,7 @@ export default function Login({ onLoginSuccess, switchToRegister }) {
 
       localStorage.setItem('chat_user', JSON.stringify(data.user));
       onLoginSuccess(data.user);
+      navigate('/dashboard');
     } catch (err) {
       setError(err.message);
     }
@@ -48,8 +51,8 @@ export default function Login({ onLoginSuccess, switchToRegister }) {
           />
           <button type="submit">Login</button>
         </form>
-        <p onClick={switchToRegister} className="toggle-link">
-          Don't have an account? Sign Up
+        <p className="toggle-link">
+          <Link to="/register">Don't have an account? Sign Up</Link>
         </p>
       </div>
     </div>
